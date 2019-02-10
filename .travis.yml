@@ -1,0 +1,22 @@
+language: node_js
+
+node_js:
+  # Node 10.3+ includes npm@6 which has good "npm ci" command
+  - 10.8
+
+cache:
+  # cache both npm modules and Cypress binary
+  directories:
+    - ~/.npm
+    - node_modules
+    - ~/.cache
+  override:
+    - npm ci
+    - npm run cy:verify
+
+before_install:
+    - npm install
+
+defaults: &defaults
+  script:
+    - npm run ci

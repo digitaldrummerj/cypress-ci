@@ -15,7 +15,8 @@
     "ci:cy-run": "start-server-and-test ci:start-server http://localhost:4200 cy:run",
     "ci:start-server": "http-server ./dist/CypressCi -a localhost -p 4200 -c-1",
     "cy:open": "cypress open",
-    "cy:run": "cypress run"
+    "cy:run": "cypress run",
+    "cy:verify": "cypress verify"
   },
   "private": true,
   "dependencies": {
