@@ -17,6 +17,9 @@ cache:
 before_install:
     - npm install
 
+addons:
+     chrome: stable
+     
 defaults: &defaults
   script:
     - npm run ci
