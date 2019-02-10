@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "lint:ci": "ng lint",
     "e2e": "ng e2e",
-    "ci": "run-s lint:ci test:ci build:prod ci:cy-run",
+    "ci": "run-s lint:ci build:prod ci:cy-run",
     "ci:cy-run": "start-server-and-test ci:start-server http://localhost:4200 cy:run",
     "ci:start-server": "http-server ./dist/CypressCi -a localhost -p 4200 -c-1",
     "cy:open": "cypress open",
