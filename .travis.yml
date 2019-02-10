@@ -15,7 +15,7 @@ cache:
     - npm run cy:verify
 
 before_install:
-    - npm install
+    - npm ci
 
 addons:
      chrome: stable
