@@ -2,7 +2,7 @@ language: node_js
 
 node_js:
   # Node 10.3+ includes npm@6 which has good "npm ci" command
-  - 10.8
+  - "lts/*"
 
 cache:
   # cache both npm modules and Cypress binary
