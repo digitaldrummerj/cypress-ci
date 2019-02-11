@@ -8,18 +8,18 @@ cache:
   # cache both npm modules and Cypress binary
   directories:
     - ~/.npm
-    - node_modules
+    - ./node_modules
     - ~/.cache
   override:
     - npm ci
     - npm run cy:verify
 
-before_install:
+install:
     - npm ci
 
 addons:
      chrome: stable
-     
-defaults: &defaults
-  script:
-    - npm run ci
+
+
+script:
+  - npm run ci
