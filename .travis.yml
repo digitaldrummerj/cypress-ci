@@ -20,5 +20,5 @@ install:
 script:
   - ng lint
   - ng build --prod
-  - npm run cypress verify
+  - npm run cy:verify
   - npm run ci:cy-run
