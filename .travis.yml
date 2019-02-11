@@ -17,9 +17,5 @@ cache:
 install:
     - npm ci
 
-addons:
-     chrome: stable
-
-
 script:
   - npm run ci
