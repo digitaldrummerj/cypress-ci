@@ -18,4 +18,7 @@ install:
     - npm ci
 
 script:
-  - npm run ci
+  - ng lint
+  - ng build --prod
+  - npm run cy:verify
+  - npm run ci:cy-run
