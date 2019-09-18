@@ -62,6 +62,7 @@
     "tslint": "~5.11.0",
     "typescript": "~3.2.2",
     "mocha-teamcity-reporter": "^3.0.0",
-    "angular-http-server": "^1.9.0"
+    "angular-http-server": "^1.9.0",
+    "mocha": "^6.2.0"
   }
 }
