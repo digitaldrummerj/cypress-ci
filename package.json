@@ -17,7 +17,7 @@
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cy:verify": "cypress verify",
-    "ci:teamcity": "run-s lint:ci build:prod ci:tc-start-server",
+    "ci:teamcity": "run-s lint:ci build:prod ci:teamcity-start-server",
     "ci:teamcity-start-server": "start-server-and-test ci:start-server http://localhost:4200 ci:teamcity-cy-run",
     "ci:teamcity-cy-run": "cypress run --reporter mocha-teamcity-reporter"
   },
