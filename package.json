@@ -13,10 +13,13 @@
     "e2e": "ng e2e",
     "ci": "run-s lint:ci build:prod ci:cy-run",
     "ci:cy-run": "start-server-and-test ci:start-server http://localhost:4200 cy:run",
-    "ci:start-server": "http-server ./dist/CypressCi -a localhost -p 4200 -c-1",
+    "ci:start-server": "angular-http-server --path ./dist/CypressCi -p 4200 --silent",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "cy:verify": "cypress verify"
+    "cy:verify": "cypress verify",
+    "ci:teamcity": "run-s lint:cs build:prod ci:tc-start-server",
+    "ci:teamcity-start-server": "start-server-and-test ci:start-server http://localhost:4200 ci:teamcity-cy-run",
+    "ci:teamcity-cy-run": "cypress run --reporter mocha-teamcity-reporter"
   },
   "private": true,
   "dependencies": {
@@ -44,7 +47,6 @@
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
     "cypress": "^3.1.5",
-    "http-server": "^0.11.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.1.1",
@@ -58,6 +60,8 @@
     "ts-loader": "^5.3.3",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.2.2"
+    "typescript": "~3.2.2",
+    "mocha-teamcity-reporter": "^3.0.0",
+    "angular-http-server": "^1.9.0"
   }
 }
